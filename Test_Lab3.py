@@ -27,4 +27,39 @@ def test_bubble_sort_invalid():
 
     result = Lab3.bubble_sort(input_arr, 3)
 
-    assert (result == [])
+    assert (result == 2)
+
+def test_bubble_sort_morethan10():
+
+    input_arr = [64, 34, 25, 12, 22, 11, 90, 10, 80, 45, 67, 55, 76]
+
+    result = Lab3.bubble_sort(input_arr, 3)
+
+    assert (result == 1)
+
+
+def test_bubble_sort_lessthan10():
+
+    input_arr = [64, 34, 25, 12, 22]
+
+    result = Lab3.bubble_sort(input_arr, 3)
+
+    assert (result == 2)
+
+
+def test_bubble_sort_equal0():
+
+    input_arr = []
+
+    result = Lab3.bubble_sort(input_arr, 3)
+
+    assert (result == 0)
+
+
+def test_bubble_sort_notint():
+
+    input_arr = ["a","b"]
+
+    result = Lab3.bubble_sort(input_arr, 3)
+
+    assert (result == 3)
